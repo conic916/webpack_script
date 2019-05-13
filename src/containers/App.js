@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './App.css';
+import style from '../containers/App.css';
 import uuid from 'uuid';
 import Title from '../components/Title';
 
@@ -8,15 +8,17 @@ class App extends React.Component {
         super(props);
         this.state = {
             data: [{
-                    text: "jeden",
-                    id: 121
-                },
-                {
-                    text: "dwa",
-                    id: 123
+                id: 1,
+                text: '455'
+            }, {
+            id: 2,
+                text: '221'
+            }, {
+            id: 3,
+                text: '144'
                 }
             ],
-            title: 'Webpack loaders'
+            title: 'Todo List'
         };
     }
     addTodo(val) {
@@ -39,7 +41,7 @@ class App extends React.Component {
 
     render() {
         return ( <div className = {style.TodoApp} >
-            <Title title={this.state.title} numberTasks={this.state.data.length} /></div>
+            <Title title={this.state.title} numberOfTasks={this.state.data.length} /></div>
         );
     }
 }
