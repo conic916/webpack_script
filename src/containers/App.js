@@ -1,6 +1,6 @@
 import React from 'react';
-import style from '../containers/App.css';
 import uuid from 'uuid';
+import style from './App.css';
 import Title from '../components/Title';
 
 class App extends React.Component {
@@ -11,13 +11,12 @@ class App extends React.Component {
                 id: 1,
                 text: '455'
             }, {
-            id: 2,
+                id: 2,
                 text: '221'
             }, {
-            id: 3,
+                id: 3,
                 text: '144'
-                }
-            ],
+            }],
             title: 'Todo List'
         };
     }
@@ -40,8 +39,17 @@ class App extends React.Component {
     }
 
     render() {
-        return ( <div className = {style.TodoApp} >
-            <Title title={this.state.title} numberOfTasks={this.state.data.length} /></div>
+        return ( < div className = {
+                style.TodoApp
+            } >
+            <
+            Title title = {
+                this.state.title
+            }
+            numberOfTasks = {
+                this.state.data.length
+            }
+            /></div >
         );
     }
 }
