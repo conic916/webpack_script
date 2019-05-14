@@ -1,6 +1,6 @@
 import React from 'react';
-import uuid from 'uuid';
 import style from './App.css';
+import uuid from 'uuid';
 import Title from '../components/Title';
 
 class App extends React.Component {
@@ -8,16 +8,19 @@ class App extends React.Component {
         super(props);
         this.state = {
             data: [{
-                id: 1,
-                text: '455'
-            }, {
-                id: 2,
-                text: '221'
-            }, {
-                id: 3,
-                text: '144'
-            }],
-            title: 'Todo List'
+                    text: "jeden",
+                    id: 128
+                },
+                {
+                    text: "dwa",
+                    id: 819
+                },
+                {
+                    text: "trzy",
+                    id: 545
+                }
+            ],
+            title: 'Webpack-loaders , number of tasks in the list '
         };
     }
     addTodo(val) {
@@ -46,7 +49,7 @@ class App extends React.Component {
             Title title = {
                 this.state.title
             }
-            numberOfTasks = {
+            numberTasks = {
                 this.state.data.length
             }
             /></div >
