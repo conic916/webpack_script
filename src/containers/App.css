@@ -1,6 +1,6 @@
 .TodoApp {
-    background-color: #2f3640;
-    color: #353b48;
+    background-color:#2f3640;
+    color:#353b48;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;

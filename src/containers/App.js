@@ -20,7 +20,7 @@ class App extends React.Component {
                     id: 545
                 }
             ],
-            title: 'Webpack-loaders , number of tasks in the list '
+            title: 'Webpack-loaders: number of tasks in the list'
         };
     }
     addTodo(val) {
@@ -42,17 +42,17 @@ class App extends React.Component {
     }
 
     render() {
-        return ( < div className = {
+        return ( 
+            <div className = {
                 style.TodoApp
             } >
-            <
-            Title title = {
+            <Title title = {
                 this.state.title
             }
             numberTasks = {
                 this.state.data.length
-            }
-            /></div >
+            } /> 
+            </div >
         );
     }
 }
