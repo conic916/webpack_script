@@ -1,34 +1,34 @@
-    const path = require('path');
-    //webpack.config.js
-    module.exports = (env) => {
-        const environment = env || 'production';
+const path = require('path');
+//webpack.config.js
+module.exports = (env) => {
+    const environment = env || 'production';
 
-        return {
-            mode: environment,
-            entry: './src/containers/App.js',
-            output: {
+    return {
+        mode: environment,
+        entry: './src/containers/App.js',
+        output: {
                 path: path.resolve(__dirname, 'build'),
                 filename: 'app.' + environment + '.bundle.js'
-            },
-            module: {
+                },
+        module: {
                 rules: [{
-                        test: /\.js$/,
-                        loader: "babel-loader"
+                    test: /\.js$/,
+                    loader: "babel-loader"
+                },
+                {
+                test: /\.css$/,
+                    use: [{
+                        loader: 'style-loader'
                     },
-                    {
-                        test: /\.css$/,
-                        use: [{
-                                loader: 'style-loader'
-                            },
-                            {
-                                loader: 'css-loader',
-                                options: {
-                                    modules: true
-                                }
+                        {
+                        loader: 'css-loader',
+                            options: {
+                                modules: true
                             }
-                        ]
-                    }
-                ]
-            },
-        }
+                        }
+                    ]
+                }
+            ]
+        },
     }
+}
