@@ -43,16 +43,10 @@ class App extends React.Component {
 
     render() {
         return ( 
-            <div className = {
-                style.TodoApp
-            } >
-            <Title title = {
-                this.state.title
-            }
-            numberTasks = {
-                this.state.data.length
-            } /> 
-            </div >
+            <div className = {style.TodoApp}>
+                <Title title = {this.state.title}
+                numberTasks = {this.state.data.length}/> 
+            </div>
         );
     }
 }
